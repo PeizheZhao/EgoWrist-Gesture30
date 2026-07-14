@@ -10,5 +10,10 @@ bundle install
 bundle exec jekyll serve
 ```
 
-The site is available at `http://127.0.0.1:4000/`. GitHub Actions builds this directory and publishes the generated `_site/` output to GitHub Pages.
+The site is available at `http://127.0.0.1:4000/EgoWrist-Gesture30/`. GitHub Actions builds this directory and publishes the generated `_site/` output to GitHub Pages.
 
+To preview locally at the domain root instead, run:
+
+```bash
+bundle exec jekyll serve --baseurl ""
+```

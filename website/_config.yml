@@ -6,8 +6,9 @@ description: >-
   30 gesture classes, 13 participants, and 336 recordings.
 lang: en
 timezone: Asia/Shanghai
-url: ""
-baseurl: ""
+url: "https://peizhezhao.github.io"
+baseurl: "/EgoWrist-Gesture30"
+repository: PeizheZhao/EgoWrist-Gesture30
 
 markdown: kramdown
 highlighter: rouge
