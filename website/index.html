@@ -1,0 +1,223 @@
+---
+title: EgoWrist-Gesture30
+description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture recognition.
+---
+{% assign repository_url = site.github.repository_url %}
+
+<section class="hero" id="overview">
+  <div class="hero-copy">
+    <h1>EgoWrist <wbr><span>Gesture 30</span></h1>
+    <p class="hero-subtitle">Dual-View Wrist-Worn RGB–IMU Dataset for Dynamic Gesture Recognition</p>
+
+    <div class="author-list" aria-label="Authors">
+      {% for author in site.data.authors %}
+        <span class="author">
+          {% if author.email %}<a href="mailto:{{ author.email }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}<sup>{{ author.affiliation }}{% if author.corresponding %}*{% endif %}</sup>
+        </span>
+      {% endfor %}
+    </div>
+
+    <div class="affiliation-list">
+      {% for affiliation in site.data.affiliations %}
+        <span><sup>{{ affiliation.id }}</sup>{{ affiliation.name }}</span>
+      {% endfor %}
+      <span><sup>*</sup>Corresponding author</span>
+    </div>
+
+    <div class="hero-actions" aria-label="Project links">
+      <a class="button button-primary" href="#publication"><span aria-hidden="true">▤</span> Paper</a>
+      <a class="button" href="#access"><span aria-hidden="true">↓</span> Dataset</a>
+      {% if repository_url %}
+        <a class="button" href="{{ repository_url }}"><span aria-hidden="true">⌘</span> Code</a>
+        <a class="button" href="{{ repository_url }}/tree/main/docs"><span aria-hidden="true">≡</span> Documentation</a>
+      {% else %}
+        <a class="button" href="#dataset"><span aria-hidden="true">⌘</span> Code &amp; Tools</a>
+        <a class="button" href="#data-format"><span aria-hidden="true">≡</span> Documentation</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <figure class="hero-media content-width">
+    <img src="{{ '/assets/media/gesture-overview.gif' | relative_url }}" alt="All 30 gestures shown with dorsal and palm wrist-camera views" width="1500" height="828">
+    <figcaption>One annotated example from every gesture class, shown from the dorsal and palm wrist-camera views.</figcaption>
+  </figure>
+</section>
+
+<section class="stats-band" aria-label="Dataset statistics">
+  <div class="stat"><strong>30</strong><span>Gesture classes</span></div>
+  <div class="stat"><strong>13</strong><span>Participants</span></div>
+  <div class="stat"><strong>336</strong><span>Recordings</span></div>
+  <div class="stat"><strong>2,751</strong><span>Annotated intervals</span></div>
+  <div class="stat"><strong>4,255</strong><span>Balanced segments</span></div>
+</section>
+
+<section class="section content-width" id="dataset">
+  <div class="section-heading">
+    <h2>Dynamic gestures from the wrist</h2>
+    <p>EgoWrist-Gesture30 captures complementary visual and inertial evidence for mobile, natural hand interaction.</p>
+  </div>
+
+  <div class="abstract-panel">
+    <h3>Abstract</h3>
+    <p>Wrist-worn cameras enable always-available gesture input, but observe the hand from a moving and partially occluded viewpoint. EgoWrist-Gesture30 provides two complementary RGB streams oriented toward the dorsal and palm sides of the hand, together with WT61C-TTL inertial measurements. The dataset contains 30 dynamic gesture classes performed by 13 participants across 336 indoor and outdoor recordings. Canonical frame-level temporal annotations and balanced derived segments support gesture recognition, cross-user evaluation, reliability-aware multi-view learning, and multimodal sensor-fusion research.</p>
+  </div>
+
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Dorsal RGB</h3>
+      <p>A wrist-mounted camera observes the back of the hand and captures complementary motion and articulation cues.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Palm RGB</h3>
+      <p>A second wrist-mounted camera observes the palm side, reducing self-occlusion through a complementary viewpoint.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Inertial sensing</h3>
+      <p>WT61C-TTL measurements provide acceleration, angular velocity, and Euler-angle signals for multimodal research.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-tint" id="gestures">
+  <div class="content-width">
+    <div class="section-heading">
+      <h2>Thirty dynamic interaction primitives</h2>
+      <p>The vocabulary spans finger articulation, fist and palm transitions, directional motion, symbolic actions, and whole-hand gestures.</p>
+    </div>
+    <figure class="figure-card figure-wide">
+      <img src="{{ '/assets/media/gesture-vocabulary.png' | relative_url }}" alt="Illustrations of the 30 dynamic gesture classes" width="2400" height="860" loading="lazy">
+      <figcaption>Gesture vocabulary and representative motion directions.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section content-width" id="distribution">
+  <div class="section-heading">
+    <h2>Data distribution</h2>
+    <p>The balanced representation contains 4,255 temporal segments. Original intervals remain the canonical annotation source.</p>
+  </div>
+  <div class="figure-grid">
+    <figure class="figure-card">
+      <img src="{{ '/assets/media/class-distribution.png' | relative_url }}" alt="Balanced segment count for each gesture class" width="1920" height="960" loading="lazy">
+      <figcaption>Balanced segment count by gesture class.</figcaption>
+    </figure>
+    <figure class="figure-card">
+      <img src="{{ '/assets/media/duration-distribution.png' | relative_url }}" alt="Average balanced segment duration for each gesture class" width="1920" height="960" loading="lazy">
+      <figcaption>Mean balanced-segment duration by gesture class.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-dark" id="device">
+  <div class="content-width">
+    <div class="section-heading section-heading-light">
+      <h2>Dual-view wrist-worn device</h2>
+      <p>Two 160-degree fixed-focus cameras capture the dorsal and palm views at a nominal 12 FPS. A shared polling loop provides software-based approximate synchronization.</p>
+    </div>
+    <figure class="device-figure">
+      <img src="{{ '/assets/media/device-and-synchronization.png' | relative_url }}" alt="EgoWrist dual-camera device and software synchronization mechanism" width="2880" height="830" loading="lazy">
+    </figure>
+    <div class="spec-grid">
+      <div><span>Camera</span><strong>HBVCAM-1466 V22</strong></div>
+      <div><span>Lens</span><strong>160° fixed focus · 1.66 mm</strong></div>
+      <div><span>Frame rate</span><strong>12 FPS nominal</strong></div>
+      <div><span>IMU</span><strong>WT61C-TTL</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="section content-width" id="data-format">
+  <div class="section-heading">
+    <h2>Research-ready annotations and tools</h2>
+    <p>The GitHub repository hosts temporal annotations, acquisition software, processing utilities, quality-review tools, and integrity validators. Recorded RGB and IMU data are distributed separately.</p>
+  </div>
+  <div class="format-layout">
+    <div class="tree-card" aria-label="Recorded data hierarchy">
+      <div class="code-title"><span></span><span></span><span></span>dataset-root</div>
+      <pre><code>subjectXX/
+└── sceneY/
+    └── recording_id/
+        ├── dorsal/
+        │   ├── 0.jpg
+        │   └── ...
+        ├── palm/
+        │   ├── 0.jpg
+        │   └── ...
+        └── sensor/
+            └── sensor.csv</code></pre>
+    </div>
+    <div class="format-copy">
+      <h3>Inclusive temporal intervals</h3>
+      <p>Each recording CSV stores <code>begin</code>, <code>end</code>, and zero-based <code>label</code> fields. Both frame boundaries are inclusive.</p>
+      <div class="schema-row"><code>14,27,10</code><span>14 frames · class 10</span></div>
+      <h3>No prescribed split</h3>
+      <p>The release does not impose training, validation, or test partitions. Participant-disjoint protocols are recommended for cross-user evaluation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="access">
+  <div class="content-width">
+    <div class="section-heading">
+      <h2>Access the dataset</h2>
+      <p>Annotations and research tools are versioned on GitHub. Recorded data access metadata and integrity information are maintained with the release.</p>
+    </div>
+    <div class="access-grid">
+      <article class="access-card">
+        <span class="access-icon" aria-hidden="true">🗂️</span>
+        <h3>Annotations</h3>
+        <p>Canonical per-recording CSV files and aggregate JSON representations for all 30 classes.</p>
+        {% if repository_url %}<a href="{{ repository_url }}/tree/main/annotations">Browse annotations <span>→</span></a>{% else %}<a href="#data-format">View format <span>→</span></a>{% endif %}
+      </article>
+      <article class="access-card">
+        <span class="access-icon" aria-hidden="true">💾</span>
+        <h3>Recorded data</h3>
+        <p>Dorsal RGB, palm RGB, and WT61C-TTL measurements distributed as an external data package.</p>
+        {% if repository_url %}<a href="{{ repository_url }}/blob/main/docs/DATA_ACCESS.md">Data access <span>→</span></a>{% else %}<a href="#data-format">Data organization <span>→</span></a>{% endif %}
+      </article>
+      <article class="access-card">
+        <span class="access-icon" aria-hidden="true">🛠️</span>
+        <h3>Tools</h3>
+        <p>Multimodal acquisition, annotation processing, visualization, review, and validation utilities.</p>
+        {% if repository_url %}<a href="{{ repository_url }}/tree/main/tools">Browse tools <span>→</span></a>{% else %}<a href="#data-format">Explore workflow <span>→</span></a>{% endif %}
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section content-width" id="publication">
+  <div class="section-heading">
+    <h2>Accompanying research</h2>
+  </div>
+  <article class="paper-card">
+    <div>
+      <p class="paper-type">UNDER PEER REVIEW</p>
+      <h3>EgoWrist: Reliability-Aware and Biomechanically Grounded Dynamic Gesture Recognition</h3>
+      <p>{% for author in site.data.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      <p class="paper-summary">The paper introduces a dual-view recognition framework that combines hierarchical feature extraction, biomechanical prototype manifold projection, and Bayesian confidence filtering for reliable wrist-worn gesture recognition.</p>
+    </div>
+  </article>
+</section>
+
+<section class="section citation-section" id="citation">
+  <div class="content-width citation-layout">
+    <div>
+      <h2>Cite EgoWrist</h2>
+      <p>Please cite the accompanying submission when using EgoWrist-Gesture30 in academic work.</p>
+    </div>
+    <div class="citation-code">
+      <button type="button" data-copy-citation>Copy BibTeX</button>
+      <pre><code id="bibtex">@unpublished{zhao2026egowrist,
+  title  = {EgoWrist: Reliability-Aware and
+            Biomechanically Grounded Dynamic
+            Gesture Recognition},
+  author = {Zhao, Peizhe and Gong, Zhenyang and
+            Tao, Ye and Shi, Rui and Chen, Nenglun and
+            Zhang, Yang and Cao, Peibei and
+            Ding, Zhenglong and Jiang, Feng},
+  year   = {2026},
+  note   = {Manuscript under peer review}
+}</code></pre>
+    </div>
+  </div>
+</section>

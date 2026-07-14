@@ -15,6 +15,12 @@ recordings/
 *.jpeg
 *.png
 !docs/assets/*.png
+!website/assets/media/*.png
 *.mp4
 *.avi
 sensor.csv
+
+# Jekyll build artifacts
+website/_site/
+website/.jekyll-cache/
+website/.sass-cache/
