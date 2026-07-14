@@ -1,8 +1,13 @@
-# EgoWrist-Gesture30
-
-**面向动态手势识别的双视角腕部 RGB 与 IMU 数据集。**
-
-> 🌐 [English](README.md)　·　📦 [数据获取](docs/zh-CN/DATA_ACCESS.md)　·　🚀 [使用指南](docs/zh-CN/USAGE.md)　·　📷 [采集指南](docs/zh-CN/ACQUISITION.md)
+<div align="center">
+  <h1>EgoWrist-Gesture30</h1>
+  <h3>面向动态手势识别的双视角腕戴式 RGB–IMU 数据集</h3>
+  <p>
+    <a href="https://peizhezhao.github.io/EgoWrist-Gesture30/"><img src="https://img.shields.io/badge/Webpage-EgoWrist--Gesture30-1f883d?logo=googlechrome&amp;style=flat-square" alt="项目网页"></a>
+    <a href="docs/zh-CN/DATA_ACCESS.md"><img src="https://img.shields.io/badge/Data_Access-数据获取-0969da?logo=databricks&amp;style=flat-square" alt="数据获取"></a>
+    <a href="docs/zh-CN/USAGE.md"><img src="https://img.shields.io/badge/Documentation-使用指南-8250df?logo=readthedocs&amp;style=flat-square" alt="使用指南"></a>
+    <a href="README.md"><img src="https://img.shields.io/badge/README-English-d73a49?style=flat-square" alt="English README"></a>
+  </p>
+</div>
 
 ## 数据集简介
 
