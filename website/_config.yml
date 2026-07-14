@@ -9,6 +9,7 @@ timezone: Asia/Shanghai
 url: "https://peizhezhao.github.io"
 baseurl: "/EgoWrist-Gesture30"
 repository: PeizheZhao/EgoWrist-Gesture30
+repository_url: "https://github.com/PeizheZhao/EgoWrist-Gesture30"
 dataset_request_url: "https://forms.office.com/r/EqiJNLWgtF"
 
 markdown: kramdown

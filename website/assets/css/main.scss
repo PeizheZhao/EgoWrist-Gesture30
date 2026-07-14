@@ -202,10 +202,23 @@ pre {
   overflow-wrap: anywhere;
 }
 
+.repository-link {
+  margin: 16px auto 0;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.repository-link a {
+  color: var(--blue);
+  text-decoration-color: #9dbdec;
+  text-underline-offset: 4px;
+}
+
 .hero-actions {
   display: flex;
-  margin: 30px auto 44px;
-  flex-wrap: wrap;
+  margin: 22px auto 44px;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 10px;
 }
@@ -689,7 +702,7 @@ figcaption {
   .hero-copy { width: calc(100% - 40px); }
   .author-list,
   .affiliation-list { width: 100%; }
-  .hero-actions { margin-bottom: 28px; }
+  .hero-actions { margin-bottom: 28px; flex-wrap: wrap; }
   .button { flex: 1 1 140px; }
   .hero-media { width: calc(100% - 20px); padding: 6px; }
   .stats-band { grid-template-columns: 1fr 1fr; }

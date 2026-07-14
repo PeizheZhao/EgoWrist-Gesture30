@@ -2,7 +2,7 @@
 title: EgoWrist-Gesture30
 description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture recognition.
 ---
-{% assign repository_url = site.github.repository_url %}
+{% assign repository_url = site.repository_url %}
 
 <section class="hero" id="overview">
   <div class="hero-copy">
@@ -24,16 +24,14 @@ description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture
       <span><sup>*</sup>Corresponding author</span>
     </div>
 
+    <p class="repository-link">
+      <a href="{{ repository_url }}">PeizheZhao/EgoWrist-Gesture30</a>
+    </p>
+
     <div class="hero-actions" aria-label="Project links">
-      <a class="button button-primary" href="#publication"><span aria-hidden="true">▤</span> Paper</a>
+      <a class="button button-primary" href="https://peizhezhao.github.io/EgoWrist-Gesture30/#publication"><span aria-hidden="true">▤</span> Paper</a>
       <a class="button" href="{{ site.dataset_request_url }}"><span aria-hidden="true">↓</span> Request Data</a>
-      {% if repository_url %}
-        <a class="button" href="{{ repository_url }}"><span aria-hidden="true">⌘</span> Code</a>
-        <a class="button" href="{{ repository_url }}/tree/main/docs"><span aria-hidden="true">≡</span> Documentation</a>
-      {% else %}
-        <a class="button" href="#dataset"><span aria-hidden="true">⌘</span> Code &amp; Tools</a>
-        <a class="button" href="#data-format"><span aria-hidden="true">≡</span> Documentation</a>
-      {% endif %}
+      <a class="button" href="{{ repository_url }}"><span aria-hidden="true">⌘</span> Code</a>
     </div>
   </div>
 
