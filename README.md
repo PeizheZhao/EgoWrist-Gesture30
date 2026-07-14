@@ -3,7 +3,7 @@
   <h3>Dual-View Wrist-Worn RGB–IMU Dataset for Dynamic Gesture Recognition</h3>
   <p>
     <a href="https://peizhezhao.github.io/EgoWrist-Gesture30/"><img src="https://img.shields.io/badge/Webpage-EgoWrist--Gesture30-1f883d?logo=googlechrome&amp;style=flat-square" alt="Webpage"></a>
-    <a href="docs/DATA_ACCESS.md"><img src="https://img.shields.io/badge/Data_Access-Documentation-0969da?logo=databricks&amp;style=flat-square" alt="Data Access"></a>
+    <a href="https://forms.office.com/r/EqiJNLWgtF"><img src="https://img.shields.io/badge/Data_Access-Request-0969da?logo=microsoftforms&amp;style=flat-square" alt="Request Data Access"></a>
     <a href="docs/USAGE.md"><img src="https://img.shields.io/badge/Documentation-Usage_Guide-8250df?logo=readthedocs&amp;style=flat-square" alt="Documentation"></a>
     <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/README-中文说明-d73a49?style=flat-square" alt="中文说明"></a>
   </p>
@@ -15,7 +15,7 @@ EgoWrist-Gesture30 contains dynamic hand gestures captured from two complementar
 
 The accompanying EgoWrist manuscript, currently under peer review, evaluates the RGB modality. IMU measurements are retained in the complete dataset to support multimodal and sensor-fusion research. The two cameras are approximately synchronized in software; dataset IMU files do not support exact frame-level RGB–IMU alignment.
 
-This GitHub repository distributes annotations, documentation, acquisition software, processing utilities, and validation tools. Recorded RGB frames and IMU files are distributed separately.
+This GitHub repository distributes annotations, documentation, acquisition software, processing utilities, and validation tools. Recorded RGB frames and IMU files are distributed separately; submit the [dataset access request form](https://forms.office.com/r/EqiJNLWgtF) to request the recorded data package.
 
 ![Thirty dynamic gesture classes captured from the dorsal and palm wrist-camera views](docs/assets/gesture_overview.gif)
 
@@ -88,7 +88,7 @@ See [`docs/HARDWARE.md`](docs/HARDWARE.md) for the capture hardware and synchron
 | | Documentation |
 |---:|---|
 | 📐 | **[Data Format](docs/DATA_FORMAT.md)**<br><sub>Annotation schemas, interval semantics, RGB layout, and IMU columns</sub> |
-| 📦 | **[Data Access](docs/DATA_ACCESS.md)**<br><sub>External recorded-data distribution and integrity metadata</sub> |
+| 📦 | **[Data Access](docs/DATA_ACCESS.md)**<br><sub>Access request, external distribution, and integrity metadata</sub> |
 | 🚀 | **[Usage Guide](docs/USAGE.md)**<br><sub>Environment setup, annotation loading, validation, and processing</sub> |
 | 📷 | **[Acquisition Guide](docs/ACQUISITION.md)**<br><sub>Dual-camera and WT61C-TTL collection workflow</sub> |
 | 🔍 | **[Quality Review](docs/REVIEW.md)**<br><sub>Clip generation and local Web-based annotation review</sub> |

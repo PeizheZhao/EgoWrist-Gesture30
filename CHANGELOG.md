@@ -8,4 +8,5 @@
 - Documented HBVCAM-1466 V22 cameras, WT61C-TTL measurements, and software-based approximate synchronization.
 - Added dual-camera plus IMU acquisition, dataset-processing, visualization, review, and validation tools.
 - Kept recorded RGB and IMU data outside the Git repository.
+- Added the recorded-data access request form to the project documentation, metadata, and website.
 - Corrected the overlapping intervals in `subject05/scene1/5.csv` by moving the later interval start from frame 42 to frame 44.

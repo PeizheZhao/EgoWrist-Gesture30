@@ -26,7 +26,7 @@ description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture
 
     <div class="hero-actions" aria-label="Project links">
       <a class="button button-primary" href="#publication"><span aria-hidden="true">▤</span> Paper</a>
-      <a class="button" href="#access"><span aria-hidden="true">↓</span> Dataset</a>
+      <a class="button" href="{{ site.dataset_request_url }}"><span aria-hidden="true">↓</span> Request Data</a>
       {% if repository_url %}
         <a class="button" href="{{ repository_url }}"><span aria-hidden="true">⌘</span> Code</a>
         <a class="button" href="{{ repository_url }}/tree/main/docs"><span aria-hidden="true">≡</span> Documentation</a>
@@ -160,7 +160,7 @@ description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture
   <div class="content-width">
     <div class="section-heading">
       <h2>Access the dataset</h2>
-      <p>Annotations and research tools are versioned on GitHub. Recorded data access metadata and integrity information are maintained with the release.</p>
+      <p>Annotations and research tools are versioned on GitHub. Submit the access request form for the separately distributed recorded RGB and IMU data.</p>
     </div>
     <div class="access-grid">
       <article class="access-card">
@@ -172,8 +172,8 @@ description: A dual-view wrist-worn RGB and IMU dataset for dynamic hand-gesture
       <article class="access-card">
         <span class="access-icon" aria-hidden="true">💾</span>
         <h3>Recorded data</h3>
-        <p>Dorsal RGB, palm RGB, and WT61C-TTL measurements distributed as an external data package.</p>
-        {% if repository_url %}<a href="{{ repository_url }}/blob/main/docs/DATA_ACCESS.md">Data access <span>→</span></a>{% else %}<a href="#data-format">Data organization <span>→</span></a>{% endif %}
+        <p>Dorsal RGB, palm RGB, and WT61C-TTL measurements are available by request for non-commercial academic and scientific research.</p>
+        <a href="{{ site.dataset_request_url }}">Request access <span>→</span></a>
       </article>
       <article class="access-card">
         <span class="access-icon" aria-hidden="true">🛠️</span>

@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "recorded_data_in_github": false,
   "modalities": ["dual_view_rgb", "wt61c_ttl_imu"],
+  "access_method": "request_form",
+  "access_request_url": "https://forms.office.com/r/EqiJNLWgtF",
   "downloads": [],
   "contact": "zhaopeizhepro@outlook.com"
 }

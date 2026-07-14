@@ -56,7 +56,9 @@ python tools/dataset/annotation_statistics.py \
 
 ## Obtain and validate recorded data
 
-Data endpoints and integrity metadata are listed in `data/download_links.json`. Extract the recorded data outside the Git repository, then validate it:
+First submit the [dataset access request form](https://forms.office.com/r/EqiJNLWgtF). If the request is approved, follow the provided distribution instructions and extract the recorded data outside the Git repository. The access-request URL and any published archive integrity metadata are listed in `data/download_links.json`.
+
+Then validate the extracted package:
 
 ```bash
 python tools/validation/validate_external_data.py /path/to/dataset-root \

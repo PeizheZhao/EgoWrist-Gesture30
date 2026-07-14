@@ -25,7 +25,11 @@ python -m unittest discover -s tools/validation/tests
 
 原始 CSV 位于 `annotations/original/csv/`，列为 `begin,end,label`。起止帧均包含在区间内，类别编号范围是 0–29。聚合 JSON 提供相同原始标注，balanced JSON 是通用派生标注，不包含训练、验证或测试划分。
 
-## 验证外部数据
+## 获取并验证外部数据
+
+首先提交[数据集访问申请表](https://forms.office.com/r/EqiJNLWgtF)。申请获批后，请按照收到的分发说明获取数据，并将数据包解压到 Git 仓库之外。申请地址及已发布数据包的完整性元数据记录在 `data/download_links.json`。
+
+然后验证解压后的数据包：
 
 ```bash
 python tools/validation/validate_external_data.py /path/to/dataset-root \

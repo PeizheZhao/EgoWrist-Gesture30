@@ -13,6 +13,7 @@
         "name": "EgoWrist-Gesture30",
         "description": {{ site.description | jsonify }},
         "version": "1.0.0",
+        "conditionsOfAccess": "Request required; non-commercial academic and scientific research use only; redistribution prohibited.",
         "keywords": ["dynamic gesture recognition", "wrist-worn camera", "dual-view RGB", "IMU", "multimodal dataset"],
         "creator": [
           {% for author in site.data.authors %}{"@type": "Person", "name": {{ author.name | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
