@@ -1,20 +1,25 @@
-# EgoWrist-Gesture30
-
-**A dual-view wrist-mounted RGB and IMU dataset for dynamic hand-gesture recognition.**
-
-> 🌐 [中文说明](README.zh-CN.md)　·　📦 [Data Access](docs/DATA_ACCESS.md)　·　🚀 [Usage Guide](docs/USAGE.md)　·　📷 [Acquisition Guide](docs/ACQUISITION.md)
+<div align="center">
+  <h1>EgoWrist-Gesture30</h1>
+  <h3>Dual-View Wrist-Worn RGB–IMU Dataset for Dynamic Gesture Recognition</h3>
+  <p>
+    <a href="https://peizhezhao.github.io/EgoWrist-Gesture30/"><img src="https://img.shields.io/badge/Webpage-EgoWrist--Gesture30-1f883d?logo=googlechrome&amp;style=flat-square" alt="Webpage"></a>
+    <a href="docs/DATA_ACCESS.md"><img src="https://img.shields.io/badge/Data_Access-Documentation-0969da?logo=databricks&amp;style=flat-square" alt="Data Access"></a>
+    <a href="docs/USAGE.md"><img src="https://img.shields.io/badge/Documentation-Usage_Guide-8250df?logo=readthedocs&amp;style=flat-square" alt="Documentation"></a>
+    <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/README-中文说明-d73a49?style=flat-square" alt="中文说明"></a>
+  </p>
+</div>
 
 ## Overview
 
 EgoWrist-Gesture30 contains dynamic hand gestures captured from two complementary wrist-mounted RGB cameras together with a WT61C-TTL inertial measurement unit. The dataset covers 30 gesture classes, 13 participants, and 336 source recordings collected in indoor and outdoor environments with a right-wrist configuration.
 
-The accompanying EgoWrist study evaluates the RGB modality. IMU measurements are retained in the complete dataset to support multimodal and sensor-fusion research. The two cameras are approximately synchronized in software; dataset IMU files do not support exact frame-level RGB–IMU alignment.
+The accompanying EgoWrist manuscript, currently under peer review, evaluates the RGB modality. IMU measurements are retained in the complete dataset to support multimodal and sensor-fusion research. The two cameras are approximately synchronized in software; dataset IMU files do not support exact frame-level RGB–IMU alignment.
 
 This GitHub repository distributes annotations, documentation, acquisition software, processing utilities, and validation tools. Recorded RGB frames and IMU files are distributed separately.
 
 ![Thirty dynamic gesture classes captured from the dorsal and palm wrist-camera views](docs/assets/gesture_overview.gif)
 
-*Examples of all 30 gesture classes. Each panel presents synchronized dorsal and palm views from one annotated recording.*
+*Examples of all 30 gesture classes. Each panel presents approximately synchronized dorsal and palm views from one annotated recording.*
 
 ## Dataset at a glance
 
@@ -94,6 +99,19 @@ See [`docs/HARDWARE.md`](docs/HARDWARE.md) for the capture hardware and synchron
 The repository does not contain recorded images, recorded sensor CSV files, generated videos, identity labels, predefined paper splits, training code, or model checkpoints.
 
 The dataset is intended for gesture-recognition research. It should not be used for identity recognition, biometric profiling, or surveillance. Experimental reports should state the selected views, resolution, split protocol, and any RGB–IMU alignment assumptions.
+
+## Citation
+
+The accompanying manuscript is currently under peer review. Please use the following citation when referencing EgoWrist-Gesture30:
+
+```bibtex
+@unpublished{zhao2026egowrist,
+  title  = {EgoWrist: Reliability-Aware and Biomechanically Grounded Dynamic Gesture Recognition},
+  author = {Zhao, Peizhe and Gong, Zhenyang and Tao, Ye and Shi, Rui and Chen, Nenglun and Zhang, Yang and Cao, Peibei and Ding, Zhenglong and Jiang, Feng},
+  year   = {2026},
+  note   = {Manuscript under peer review}
+}
+```
 
 ## License
 
