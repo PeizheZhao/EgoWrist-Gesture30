@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EgoWrist clip review</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { max-width: 1400px; margin: 0 auto; padding: 24px; background: #f6f7f9; color: #1d2733; }
+    header, article, nav { background: white; border: 1px solid #d9dee5; border-radius: 10px; }
+    header, nav { padding: 16px 20px; margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 18px; }
+    article { padding: 16px; }
+    video { width: 100%; background: #111; border-radius: 6px; }
+    code { overflow-wrap: anywhere; }
+    label { display: block; margin: 7px 0; }
+    textarea { width: 100%; min-height: 56px; box-sizing: border-box; }
+    button { margin-top: 9px; padding: 8px 14px; cursor: pointer; }
+    .saved { color: #08783d; min-height: 1.2em; }
+    nav { display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EgoWrist clip review</h1>
+    <p>{{ total_videos }} clips · page {{ page }} of {{ total_pages }}</p>
+  </header>
+  <div class="grid">
+    {% for video in videos %}
+    {% set current = reviews.get(video, {}) %}
+    <article>
+      <h2><code>{{ video }}</code></h2>
+      <video controls preload="metadata"><source src="{{ url_for('video', filename=video) }}"></video>
+      <form class="review-form">
+        <input type="hidden" name="video" value="{{ video }}">
+        {% for key, label in options.items() %}
+        <label><input type="radio" name="status" value="{{ key }}" required {% if current.get('status') == key %}checked{% endif %}> {{ label }}</label>
+        {% endfor %}
+        <label>Notes<textarea name="notes">{{ current.get('notes', '') }}</textarea></label>
+        <button type="submit">Save review</button>
+        <p class="saved"></p>
+      </form>
+    </article>
+    {% endfor %}
+  </div>
+  <nav>
+    <span>{% if page > 1 %}<a href="?page={{ page - 1 }}&per_page={{ per_page }}">Previous</a>{% endif %}</span>
+    <span>{% if page < total_pages %}<a href="?page={{ page + 1 }}&per_page={{ per_page }}">Next</a>{% endif %}</span>
+  </nav>
+  <script>
+    document.querySelectorAll('.review-form').forEach((form) => {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const response = await fetch('/review', { method: 'POST', body: new FormData(form) });
+        const result = await response.json();
+        form.querySelector('.saved').textContent = result.message;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Install only the tools you use. Core annotation validation uses the Python standard library.
+opencv-python>=4.8
+pyserial>=3.5
+flask>=3.0
+Pillow>=10.0
+matplotlib>=3.8

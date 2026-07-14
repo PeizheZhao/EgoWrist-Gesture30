@@ -1,0 +1,8 @@
+{
+  "dataset": "EgoWrist-Gesture30",
+  "version": "1.0.0",
+  "recorded_data_in_github": false,
+  "modalities": ["dual_view_rgb", "wt61c_ttl_imu"],
+  "downloads": [],
+  "contact": "zhaopeizhepro@outlook.com"
+}
